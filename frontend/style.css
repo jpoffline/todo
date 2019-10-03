@@ -114,6 +114,11 @@ body{
     font-style: italic;
   }
 
+  .todoitemstatus{
+    margin: 10px;
+    padding: 10px;
+  }
+
   #todoitems{
     background:rgb(255, 239, 219);
     border: 2px solid rgb(255, 239, 219);
