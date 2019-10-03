@@ -1,0 +1,123 @@
+
+body{
+    font-size: 70%
+  }
+  
+  .red {
+    color: red;
+  
+  }
+  
+  #dashboarditems{
+    background:rgb(255, 239, 219);
+    border: 2px solid rgb(255, 239, 219);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  .periodtotal{
+    background: yellow;
+  }
+  
+  .green {
+    color: green;
+  
+  }
+  
+  .itemlabel{
+    font-weight: bold;
+  }
+  
+  .portfolioitem{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+  }
+  
+  .highlight{
+    border: 2px solid red;
+  }
+  
+  .periodname{
+    font-weight: bold;
+    font-size: 120%;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: grey;
+    color: white;
+  }
+  
+  .row {
+    margin: 10px;
+  }
+  
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  
+  .autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+  }
+  .autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+  
+.todoitem{
+  margin: 10px;
+  padding: 10px;
+  background: rgb(240, 234, 234);
+  border: 1px solid rgb(240, 234, 234);
+  border-radius: 5px;
+}
+
+  .todoitemtitle{
+    color: red;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .todoitembody{
+    font-style: italic;
+  }
+
+  #todoitems{
+    background:rgb(255, 239, 219);
+    border: 2px solid rgb(255, 239, 219);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+  }
