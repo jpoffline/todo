@@ -1,4 +1,39 @@
-function todoItemStatusIcon( status){
+function todoItemComponent(todoitem){
+    var comp = document.createElement("div");
+    comp.classList.add("todoitem");
+    comp.setAttribute("id", "todo-" + todoitem.id)
+    
+    comp.appendChild(todoItemIdComponent(todoitem.id));
+    comp.appendChild(todoItemStatusComponent("todo-" + todoitem.id + "-status", todoitem.status))
+    comp.appendChild(todoItemTitleComponent(todoitem.title));
+    comp.appendChild(todoItemBodyComponent(todoitem.body));
+    
+    comp.appendChild(todoItemPriorityComponent(todoitem.priority));
+    comp.appendChild(todoItemAddedComponent(todoitem.added));
+    
+    return(comp)
+}
+
+function todoItemAddedComponent(when){
+    var component = document.createElement("span");
+    component.innerHTML = when
+    component.classList.add("todoitemadded");
+    return(component)
+}
+
+function todoItemPriorityComponent(priority){
+    if(priority < 0){priority = 0}
+    if(priority > 4){priority = 4}
+    var component = document.createElement("span");
+    component.appendChild(genIcon("thermometer-" + priority))
+    if(priority > 3){
+        component.classList.add("red")
+    }
+    component.classList.add("todoitempriority");
+    return(component)
+}
+
+function todoItemStatusIcon(status){
     if(status == "done"){
         return(genIcon("check-square"))
     } else if(status == "todo"){
@@ -40,18 +75,7 @@ function todoItemBodyComponent(body){
     return(compbody)
 }
 
-function todoItemComponent(todoitem){
-    var comp = document.createElement("div");
-    comp.classList.add("todoitem");
-    comp.setAttribute("id", "todo-" + todoitem.id)
-    
-    comp.appendChild(todoItemIdComponent(todoitem.id));
-    comp.appendChild(todoItemStatusComponent("todo-" + todoitem.id + "-status", todoitem.status))
-    comp.appendChild(todoItemTitleComponent(todoitem.title));
-    comp.appendChild(todoItemBodyComponent(todoitem.body));
-    
-    return(comp)
-}
+
 
 
 function cycleItemStatus(id){
@@ -73,7 +97,4 @@ function cycleItemStatus(id){
     comp.classList.remove(crntStatus)
     comp.classList.add(newStatus)
 
-    console.log(comp)
-
-    
 }

@@ -5,7 +5,6 @@ body{
   
   .red {
     color: red;
-  
   }
   
   #dashboarditems{
@@ -125,4 +124,13 @@ body{
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
+  }
+
+  .todoitemadded{
+    float: right;
+  }
+
+  .todoitempriority{
+    float:right;
+    padding-left: 5px;
   }

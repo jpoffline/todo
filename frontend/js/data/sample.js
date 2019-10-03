@@ -1,22 +1,31 @@
 var SAMPLEDATA = {
-    'items':[
+    'items': [
         {
-            'id':1,
-            'title':'Title',
-            'body':'Do this thing',
-            'status':'doing'
+            'id': 1,
+            'title': 'Title',
+            'body': 'Do this thing',
+            'status': 'doing',
+            'added': '4 days ago',
+            'priority': 1,
+            'assignedto': 'jpearson'
         },
         {
-            'id':2,
-            'title':'Title 2',
-            'body':'Do this other thing',
-            'status':'done'
+            'id': 2,
+            'title': 'Title 2',
+            'body': 'Do this other thing',
+            'status': 'done',
+            'added': '1 hour ago',
+            'priority': 4,
+            'assignedto': 'jpearson'
         },
         {
-            'id':3,
-            'title':'Title 3',
-            'body':'Do this another thing',
-            'status':'todo'
+            'id': 3,
+            'title': 'Title 3',
+            'body': 'Do this another thing',
+            'status': 'todo',
+            'added': '23 mins ago',
+            'priority': 2,
+            'assignedto': 'jpearson'
         }
     ]
 }
