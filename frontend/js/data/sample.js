@@ -21,10 +21,19 @@ var SAMPLEDATA = {
         {
             'id': 3,
             'title': 'Title 3',
-            'body': 'Do this another thing',
+            'body': 'Do another thing',
             'status': 'todo',
             'added': '23 mins ago',
             'priority': 2,
+            'assignedto': 'jpearson'
+        },
+        {
+            'id': 4,
+            'title': 'Title 4',
+            'body': 'Do another thing',
+            'status': 'doing',
+            'added': '23 mins ago',
+            'priority': 3,
             'assignedto': 'jpearson'
         }
     ]
