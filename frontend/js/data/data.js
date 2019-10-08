@@ -15,3 +15,25 @@ function getItem(id){
     }
 }
 
+function updateItemStatus(id, newStatus){
+    var d = loadData()
+    for(var i = 0; i < d.items.length; i++){
+        if(d.items[i].id == id){
+            d.items[i].status = newStatus;
+            continue;
+        }
+    }
+    saveData(d)
+}
+
+function updateItemPriority(id, newP){
+    var d = loadData()
+    for(var i = 0; i < d.items.length; i++){
+        if(d.items[i].id == id){
+            d.items[i].priority = newP;
+            continue;
+        }
+    }
+    saveData(d)
+    console.log(loadData())
+}

@@ -11,7 +11,7 @@ function todoItemComponent(todoitem) {
     comp.appendChild(BSTBELEM(todoItemBodyComponent(todoitem.body), "3"));
 
     comp.appendChild(BSTBELEM(todoItemAssignedToComponent(todoitem.assignedto), "1"));
-    comp.appendChild(BSTBELEM(todoItemPriorityComponent(todoitem.priority), "1"));
+    comp.appendChild(BSTBELEM(todoItemPriorityComponent("todo-" + todoitem.id + "-priority", todoitem.priority), "1"));
     comp.appendChild(BSTBELEM(todoItemAddedWhenComponent(todoitem.added)));
 
     return (comp)
