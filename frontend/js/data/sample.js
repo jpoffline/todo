@@ -2,12 +2,13 @@ var SAMPLEDATA = {
     'items': [
         {
             'id': 1,
-            'title': 'Title',
+            'title': 'Short description of item',
             'body': 'Do this thing',
             'status': 'doing',
             'added': '4 days ago',
             'priority': 1,
-            'assignedto': 'jpearson'
+            'assignedto': 'jpearson',
+            'category': 'house'
         },
         {
             'id': 2,
@@ -16,7 +17,8 @@ var SAMPLEDATA = {
             'status': 'done',
             'added': '1 hour ago',
             'priority': 4,
-            'assignedto': 'jpearson'
+            'assignedto': 'Iona',
+            'category': 'house'
         },
         {
             'id': 3,
@@ -25,7 +27,8 @@ var SAMPLEDATA = {
             'status': 'todo',
             'added': '23 mins ago',
             'priority': 2,
-            'assignedto': 'jpearson'
+            'assignedto': 'jpearson',
+            'category': 'house'
         },
         {
             'id': 4,
@@ -34,7 +37,8 @@ var SAMPLEDATA = {
             'status': 'doing',
             'added': '23 mins ago',
             'priority': 3,
-            'assignedto': 'jpearson'
+            'assignedto': 'jpearson',
+            'category': 'house'
         }
     ]
 }
