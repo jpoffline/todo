@@ -6,7 +6,7 @@ function todoItemDetail(item){
     bodyinfo.innerHTML = item.body;
     bodyinfo.classList.add("todoitembodydetail");
     var assignedto = document.createElement("div");
-    assignedto.innerHTML = "Assigned to: " + item.assignedto + " // added "+ item.added;
+    assignedto.innerHTML = item.priority + " // assigned to: " + item.assignedto + " // added "+ item.added;
     comp.appendChild(title);
     comp.appendChild(bodyinfo);
     comp.appendChild(assignedto);

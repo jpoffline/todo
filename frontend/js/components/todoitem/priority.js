@@ -2,20 +2,36 @@ function todoItemPriorityIcon(p){
     return genIcon("thermometer-" + p);
 }
 
+function todoItemPriorityComponentColour(c){
+    var p = c.getAttribute("priority");
+    if(p > 3){
+        c.classList.add("red")
+    }else{
+        c.classList.remove("red")
+    }
+    return(c)
+}
+
+
 function todoItemPriorityComponent(id, priority){
-    if(priority < 0){priority = 0}
-    if(priority > 4){priority = 4}
+    priority = snapTo(priority, 0, 4)
     var component = document.createElement("span");
     component.appendChild(todoItemPriorityIcon(priority))
-    if(priority > 3){
-        component.classList.add("red")
-    }
+    component.setAttribute("priority", priority)
+
+    component = todoItemPriorityComponentColour(component)
     component.classList.add("todoitempriority");
     component.setAttribute("id", id);
-    component.setAttribute("priority", priority)
+    
     component.setAttribute("onclick", "cycleItemPriority(this.id)");
 
     return(component)
+}
+
+function snapTo(value, mn, mx){
+    if(value < mn){value = mn}
+    if(value > mx){value = mx}
+    return(value)
 }
 
 function cycleItemPriority(id){
@@ -24,10 +40,7 @@ function cycleItemPriority(id){
     var newp = (currp+1) % 5;
     comp.setAttribute("priority", newp)
     comp.replaceChild(todoItemPriorityIcon(newp), comp.childNodes[0])
-    if(newp > 3){
-        comp.classList.add("red")
-    }else{
-        comp.classList.remove("red")
-    }
+
+    comp = todoItemPriorityComponentColour(comp)
     updateItemPriority(id.split("-")[1], newp)
 }

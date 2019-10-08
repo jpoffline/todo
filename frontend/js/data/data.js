@@ -35,5 +35,4 @@ function updateItemPriority(id, newP){
         }
     }
     saveData(d)
-    console.log(loadData())
 }
