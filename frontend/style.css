@@ -133,11 +133,18 @@ body{
   }
 
   .todoitemassignedto{
-    
+    float: left;
     
   }
 
   .assignedtobadge{
     border-radius: 75%;
     padding: 5px;
+  }
+
+  .todoitembodydetail{
+    background: blanchedalmond;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
   }

@@ -17,8 +17,13 @@ function todoItemComponent(todoitem) {
     return (comp)
 }
 
+
+
 function todoItemClicked(id){
-    console.log(id)
+    id = id.slice(5, id.length);
+    var tgt = document.getElementById("selectedtodoitem");
+    tgt.innerHTML = "";
+    tgt.appendChild(todoItemDetail(getItem(id)));
 }
 
 function BSTBELEM(content, n="2"){
@@ -43,7 +48,6 @@ function todoItemIdComponent(id) {
 
 function todoItemTitleComponent(title) {
     var comp = document.createElement("span");
-
     comp.innerHTML = stringTruncate(title, 10);
     comp.classList.add("todoitemtitle")
     return (comp)

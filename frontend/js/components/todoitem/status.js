@@ -1,12 +1,6 @@
 function todoItemStatusIcon(status) {
-    if (status == "done") {
-        return (genIcon("check-square"))
-    } else if (status == "todo") {
-        return (genIcon("square"))
-    } else if (status == "doing") {
-        return (genIcon("spinner"))
-    }
-    return (status)
+    return genIcon(JOBSTATUS[status].icon)
+
 }
 
 function todoItemStatusComponent(id, status) {
@@ -26,14 +20,12 @@ function cycleItemStatus(id) {
     currentStatusList = comp.classList
     if (currentStatusList.contains("doing")) {
         crntStatus = "doing"
-        newStatus = "done"
     } else if (currentStatusList.contains("done")) {
         crntStatus = "done"
-        newStatus = "todo"
     } else if (currentStatusList.contains("todo")) {
         crntStatus = "todo"
-        newStatus = "doing"
     }
+    newStatus = JOBSTATUS[crntStatus].next
 
     comp.replaceChild(todoItemStatusIcon(newStatus), comp.childNodes[0])
     comp.classList.remove(crntStatus)
